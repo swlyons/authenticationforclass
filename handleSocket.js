@@ -1,3 +1,7 @@
+/*
+Attribution: https://github.com/socketio/socket.io/tree/master/examples/chat
+*/
+
 var numUsers = 0;
 
 module.exports = function (socket) {
