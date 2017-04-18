@@ -4,9 +4,28 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="33235833049-91ur1pf4len237mm4ogjfs6a3qn08lld.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+ <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js" integrity="sha256-WKvqiY0jZHWQZIohYEmr9KUC5rEaYEOFTq+ByllJK8w=" crossorigin="anonymous"></script>
+  <script src="javascripts/main.js"></script>
 <script>
     function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
